@@ -1,11 +1,31 @@
+.home-wrapper .banner .banner-conent .hero h1{
+  font-size 2.8rem!important
+}
+// 文档中适配
+table
+  width auto
+.page >*:not(.footer),.card-box
+  box-shadow: none!important
+
+.page
+  @media (min-width $contentWidth + 80)
+    padding-top $navbarHeight!important
+.home-wrapper .banner .banner-conent
+  padding 0 2.9rem
+  box-sizing border-box
+.home-wrapper .banner .slide-banner .slide-banner-wrapper .slide-item a
+  h2
+    margin-top 2rem
+    font-size 1.2rem!important
+  p
+    padding 0 1rem
 
 // 评论区颜色重置
 .gt-container
   .gt-ico-tip
     &::after
-      content: '。( Win + . ) 或 ( ⌃ + ⌘ + ␣ ) 打开表情'
+      content: '。( Win + . ) or ( ⌃ + ⌘ + ␣ ) open Emoji'
       color: #999
-      font-size: .8rem
   .gt-meta
     border-color var(--borderColor)!important
   .gt-comments-null
@@ -36,7 +56,7 @@
 .qq
   position: relative;
 .qq::after
-  content: "可撩";
+  content: "";
   background: $accentColor;
   color:#fff;
   padding: 0 5px;
@@ -57,3 +77,5 @@ body .vuepress-plugin-demo-block__wrapper
       border-bottom-color: $accentColor !important;
     svg
       fill: $accentColor !important;
+.custom-html-window
+  display: none !improtant;

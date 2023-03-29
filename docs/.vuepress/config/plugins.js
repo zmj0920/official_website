@@ -1,47 +1,47 @@
 // 插件配置
 module.exports = [
   // 本地插件
-  // [
-  //   require("../plugins/love-me"),
-  //   {
-  //     // 鼠标点击爱心特效
-  //     color: "#11a8cd", // 爱心颜色，默认随机色
-  //     excludeClassName: "theme-vdoing-content", // 要排除元素的class, 默认空''
-  //   },
-  // ],
+  [
+    require("../plugins/love-me"),
+    {
+      // 鼠标点击爱心特效
+      color: "#11a8cd", // 爱心颜色，默认随机色
+      excludeClassName: "theme-vdoing-content", // 要排除元素的class, 默认空''
+    },
+  ],
 
   "vuepress-plugin-baidu-autopush", // 百度自动推送
 
   // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
-  // [
-  //   "thirdparty-search",
-  //   {
-  //     thirdparty: [
-  //       // 可选，默认 []
-  //       {
-  //         title: "在MDN中搜索",
-  //         frontUrl: "https://developer.mozilla.org/zh-CN/search?q=", // 搜索链接的前面部分
-  //         behindUrl: "", // 搜索链接的后面部分，可选，默认 ''
-  //       },
-  //       {
-  //         title: "在Runoob中搜索",
-  //         frontUrl: "https://www.runoob.com/?s=",
-  //       },
-  //       {
-  //         title: "在Vue API中搜索",
-  //         frontUrl: "https://cn.vuejs.org/v2/api/#",
-  //       },
-  //       {
-  //         title: "在Bing中搜索",
-  //         frontUrl: "https://cn.bing.com/search?q=",
-  //       },
-  //       {
-  //         title: "通过百度搜索本站的",
-  //         frontUrl: "https://www.baidu.com/s?wd=site%3Axugaoyi.com%20",
-  //       },
-  //     ],
-  //   },
-  // ],
+  [
+    "thirdparty-search",
+    {
+      thirdparty: [
+        // 可选，默认 []
+        {
+          title: "在MDN中搜索",
+          frontUrl: "https://developer.mozilla.org/zh-CN/search?q=", // 搜索链接的前面部分
+          behindUrl: "", // 搜索链接的后面部分，可选，默认 ''
+        },
+        {
+          title: "在Runoob中搜索",
+          frontUrl: "https://www.runoob.com/?s=",
+        },
+        {
+          title: "在Vue API中搜索",
+          frontUrl: "https://cn.vuejs.org/v2/api/#",
+        },
+        {
+          title: "在Bing中搜索",
+          frontUrl: "https://cn.bing.com/search?q=",
+        },
+        {
+          title: "通过百度搜索本站的",
+          frontUrl: "https://www.baidu.com/s?wd=site%3Axugaoyi.com%20",
+        },
+      ],
+    },
+  ],
 
   [
     "one-click-copy",
@@ -85,25 +85,25 @@ module.exports = [
       hm: "503f098e7e5b3a5b5d8c5fc2938af002",
     },
   ],
-  // [
-  //   "vuepress-plugin-comment", // 评论
-  //   {
-  //     choosen: "gitalk",
-  //     options: {
-  //       clientID: "223372406ca3b881ee3e",
-  //       clientSecret: "390e68968aa020b71615a3e5ef180b171430c5f7",
-  //       repo: "blog-gitalk-comment", // GitHub 仓库
-  //       owner: "zmj0920", // GitHub仓库所有者
-  //       admin: ["zmj0920"], // 对仓库有写权限的人
-  //       // distractionFreeMode: true,
-  //       pagerDirection: "last", // 'first'正序 | 'last'倒序
-  //       id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
-  //       title: "「评论」<%- frontmatter.title %>", // GitHub issue 的标题
-  //       labels: ["Gitalk", "Comment"], // GitHub issue 的标签
-  //       body: "页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>", // GitHub issue 的内容
-  //     },
-  //   },
-  // ],
+  [
+    "vuepress-plugin-comment", // 评论
+    {
+      choosen: "gitalk",
+      options: {
+        clientID: "223372406ca3b881ee3e",
+        clientSecret: "390e68968aa020b71615a3e5ef180b171430c5f7",
+        repo: "blog-gitalk-comment", // GitHub 仓库
+        owner: "zmj0920", // GitHub仓库所有者
+        admin: ["zmj0920"], // 对仓库有写权限的人
+        // distractionFreeMode: true,
+        pagerDirection: "last", // 'first'正序 | 'last'倒序
+        id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
+        title: "「评论」<%- frontmatter.title %>", // GitHub issue 的标题
+        labels: ["Gitalk", "Comment"], // GitHub issue 的标签
+        body: "页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>", // GitHub issue 的内容
+      },
+    },
+  ],
   [
     "@vuepress/last-updated", // "上次更新"时间格式
     {
